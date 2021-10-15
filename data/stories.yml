@@ -1,0 +1,50 @@
+version: "2.0"
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+  - story: say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+  - story: bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+  - story: welcome path
+    steps:
+      - intent: karibu
+      - action: utter_karibu
+  - story: effects of teenage pregnancies
+    steps:
+      - intent: effects_teenage_pregnancies
+      - action: utter_effects_teenage_pregnancies
+  - story: family planning
+    steps:
+      - intent: family_planning
+      - action: utter_family_planning
+  - story: appraisal path
+    steps:
+      - intent: appraisal
+      - action: utter_appraisal
