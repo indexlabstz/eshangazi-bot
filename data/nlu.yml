@@ -20,6 +20,7 @@ nlu:
       - Hallow
       - Hello
       - Hallo
+
   - intent: goodbye
     examples: |
       - bye
@@ -33,61 +34,7 @@ nlu:
       - Nashukuru
       - Shukrani
       - Asante
-  - intent: affirm
-    examples: |
-      - yes
-      - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
-  - intent: deny
-    examples: |
-      - no
-      - n
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
-  - intent: mood_great
-    examples: |
-      - perfect
-      - great
-      - amazing
-      - feeling like a king
-      - wonderful
-      - I am feeling very good
-      - I am great
-      - I am amazing
-      - I am going to save the world
-      - super stoked
-      - extremely good
-      - so so perfect
-      - so good
-      - so perfect
-  - intent: mood_unhappy
-    examples: |
-      - my day was horrible
-      - I am sad
-      - I don't feel very well
-      - I am disappointed
-      - super sad
-      - I'm so sad
-      - sad
-      - very sad
-      - unhappy
-      - not good
-      - not very good
-      - extremly sad
-      - so saad
-      - so sad
-  - intent: bot_challenge
-    examples: |
-      - are you a bot?
-      - are you a human?
-      - am I talking to a bot?
-      - am I talking to a human?
+
   - intent: karibu
     examples: |
       - Aje
@@ -98,19 +45,93 @@ nlu:
       - Oya mambo vipi?
       - Oya
       - Oya niambie
+
   - intent: appraisal
     examples: |
       - pole na kazi
       - pole na kazi shangazi
-  - intent: effects_teenage_pregnancies
+
+  - intent: item_category_intent
     examples: |
-      - Athari za mimba kwa vijana
-      - Madhara ya mimba za utotoni
-      - Madhara ya mimba
-      - Athari za mimba kwa vijana balehe
-  - intent: family_planning
+      - Nataka kujua kuhusu [uzazi wa mpango](item_category_entity)
+      - Nijulishe kuhusu [uzazi wa mpango](item_category_entity)
+      - [Uzazi wa mpango](item_category_entity)
+      - Nini maana  ya [Uzazi wa Mpango](item_category_entity)?
+      - nini maana ya [haki za afya ya uzazi na ujinsia](item_category_entity)?
+      - [Haki za Afya ya Uzazi na Ujinsia](item_category_entity)
+      - [haki za afya ya uzazi na ujinsia](item_category_entity)
+      - [Madhara ya Mimba za Utotoni](item_category_entity)
+      - [madhara ya mimba za utotoni](item_category_entity)
+      - [Hedhi](item_category_entity)
+      - [hedhi](item_category_entity)
+
+  - intent: category_item_intent
     examples: |
-      - Nataka kujua kuhusu uzazi wa mpango
-      - Nijulishe kuhusu uzazi wa mpango
-      - Uzazi wa mpango
-      - Nini maana  ya Uzazi wa Mpango?
+      - [Njia za uzazi wa mpango](category_item_entity)
+      - Nitajie [njia za uzazi wa mpango](category_item_entity)
+      - Zipo [njia ngapi za uzazi wa mpango](category_item_entity)
+      - Kuna [njia ngapi za uzazi wa mpango](category_item_entity)
+      - Zipi [njia za kudumu](category_item_entity)
+      - Zipi [njia za muda mfupi](category_item_entity)
+      - Zipi [njia za muda mrefu](category_item_entity)
+      - Nini [umuhimu wa uzazi wa mpango](category_item_entity)
+      - [umuhimu wa uzazi wa mpango](category_item_entity)
+      - Nieleze [umuhimu wa uzazi wa mpango](category_item_entity)
+      - Nieleze [umuhimu wa uzazi wa mpango kwa baba](category_item_entity)
+      - Nieleze [umuhimu wa uzazi wa mpango kwa mama](category_item_entity)
+      - Nieleze [umuhimu wa uzazi wa mpango kwa mtoto](category_item_entity)
+      - Nieleze [umuhimu wa uzazi wa mpango kwa jamii](category_item_entity)
+      - Nifafanulie [kufunga kizazi kwa mwanaume](category_item_entity)
+      - Nifafanulie [kufunga kizazi kwa mwanamke](category_item_entity)
+      - [Haki ya Kuishi](category_item_entity)
+      - [Kuwa Huru na Unyanyasaji na Matibabu ya Magonjwa](category_item_entity)
+      - [Uhuru wa Kukusanyika na Ushiriki wa Kisiasa](category_item_entity)
+      - [Matokeo ya Kisayansi](category_item_entity)
+      - [Huduma za Afya na Usalama wa Afya](category_item_entity)
+      - [Kuamua Kupata Watoto](category_item_entity)
+      - [Kuamua au Kutoamua Kuoa au Kuolewa na Lini Kuanzisha Familia](category_item_entity)
+      - [Uhuru wa Mawazo](category_item_entity)
+      - [Haki ya Faragha](category_item_entity)
+      - [Usawa na Kuwa Huru na Aina Yoyote ya Ubaguzi](category_item_entity)
+      - [Uhuru na Usalama](category_item_entity)
+      - [Kitanzi](category_item_entity)
+      - [Vipandikizi au Kipandikizi](category_item_entity)
+      - [Kondomu ya Kiume](category_item_entity)
+      - [Kondomu ya Kike](category_item_entity)
+      - [Sindano za Uzazi wa Mpango](category_item_entity)
+      - [Vidonge vya Uzazi wa Mpango](category_item_entity)
+      - [Kutopata Hedhi Wakati wa Kunyonyesha](category_item_entity)
+      - [Kuchunguza Ute wa Ukeni](category_item_entity)
+      - [Kuahirisha Kujamiiana](category_item_entity)
+      - [Baada ya Kujifungua](category_item_entity)
+      - [Wakati wa Uchungu au Muda wa Kujifungua](category_item_entity)
+      - [Wakati wa Ujauzito](category_item_entity)
+      - [Usafi wa Hedhi](category_item_entity)
+      - [Mzunguko wa Hedhi](category_item_entity)
+      - [Dondoo za Usafi](category_item_entity)
+      - [Kutupa Pedi](category_item_entity)
+      - [Aina za Mzunguko](category_item_entity)
+      - [Mzunguko Mfupi](category_item_entity)
+      - [Siku za Hedhi](category_item_entity)
+      - [Mzunguko wa Kawaida](category_item_entity)
+      - [Mzunguko Mrefu](category_item_entity)
+      - [Kuchelewa Hedhi](category_item_entity)
+      - [Dalili za Hedhi](category_item_entity)
+      - [Kubadili Mazingira](category_item_entity)
+      - [Magonjwa na kuchelewa kwa hedhi](category_item_entity)
+      - [Dawa za Uzazi wa mpango](category_item_entity)
+      - [Kubadili Mazingira](category_item_entity)
+      - [Siku Salama](category_item_entity)
+      - [Msongo wa Mawazo](category_item_entity)
+      - [Siku Hatarishi](category_item_entity)
+      - [Kunyonyesha](category_item_entity)
+      - [Dalili Siku Hatarishi](category_item_entity)
+      - [Kuepuka Mimba](category_item_entity)
+      - [Sababu za Maumivu](category_item_entity)
+      - [Kupunguza Maumivu](category_item_entity)
+      - [Maji ya Tangawizi](category_item_entity)
+      - [Dawa kupunguza maumivu](category_item_entity)
+      - [Aina za  Mizunguko](category_item_entity)
+      - [Maumivu ya Hedhi](category_item_entity)
+      - [Maumivu Wakati wa Hedhi](category_item_entity)
+

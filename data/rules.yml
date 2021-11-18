@@ -7,7 +7,12 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: category item
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+    - intent: category_item_intent
+    - action: action_category_item
+
+- rule: item category
+  steps:
+    - intent: item_category_intent
+    - action: action_item_category

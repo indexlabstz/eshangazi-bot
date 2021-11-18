@@ -9,40 +9,25 @@ intents:
     use_entities: true
 - goodbye:
     use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
 - karibu:
     use_entities: true
 - appraisal:
     use_entities: true
 - effects_teenage_pregnancies:
     use_entities: true
-- family_planning:
+- category_item_intent:
     use_entities: true
-entities: []
+- item_category_intent:
+    use_entities: true
+entities:
+- item_category_entity
+- category_item_entity
 slots: {}
 responses:
   utter_greet:
-  - text: Hey! How are you?
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_happy:
-  - text: Great, carry on!
+  - text: Sijambo, nashukuru.
   utter_goodbye:
-  - text: Bye
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: Kwe kheri
   utter_karibu:
   - text: Mmh, ndio salamu zenu vijana sawa. Mimi sijambo shangazi yako. Niambie nikusaidie nini.
   - text: Aah, unaongea na shangazi hapa. Hujambo?
@@ -51,12 +36,9 @@ responses:
   - text: Asante
   - text: Nashukuru
   - text: Shukrani
-  utter_effects_teenage_pregnancies:
-  - text: Mimba za utotoni ni mimba zinazotokana na vijana kufanya ngono zisizo salama. Kijana balehe anapopata mimba; mimba hii huitwa "mimba ya utotoni".
-  - text: Zifuatazo ni athari/madhara ya mimba za utotoni.
-  utter_family_planning:
-  - text: Ni uamuzi wa hiari wa mtu binafsi/mtu na mwenza juu ya lini wazae watoto na idadi wanayoitaka na wapishane muda gani kulingana na uwezo na mahitaji yao.
-  - text: Ni uamuzi wa hiari wa mtu binafsi /mtu na mwenza juu ya lini wazae watoto wangapi na wapishane vipi kulingana na uwezo na mahitaji yao.
-actions: []
+actions:
+- action_category_item
+- action_item_category
+- action_item_categories
 forms: {}
 e2e_actions: []
