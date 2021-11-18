@@ -5,7 +5,7 @@ from rasa_sdk.executor import CollectingDispatcher
 import requests
 from slugify import slugify
 
-url = "http://eshangazi.test/api/item-categories"
+url = "https://eshangazi.co.tz/api/item-categories"
 
 
 class ActionItemCategories(Action):
